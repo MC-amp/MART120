@@ -1,0 +1,46 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Information Form</title>
+    <script>
+        function validateForm() {
+            const firstName = document.getElementById("firstName").value.trim();
+            const lastName = document.getElementById("lastName").value.trim();
+            const email = document.getElementById("email").value.trim();
+            let message = "";
+
+            if (!firstName) {
+                message += "First name is required. ";
+            }
+            if (!lastName) {
+                message += "Last name is required. ";
+            }
+            if (!email) {
+                message += "Email is required. ";
+            }
+            if (message) {
+                alert(message);
+            } else {
+                alert("Thank you for your information!");
+            }
+        }
+    </script>
+</head>
+<body>
+    <h1>Information Form</h1>
+    <form onsubmit="event.preventDefault(); validateForm();">
+        <label for="firstName">First Name:</label><br>
+        <input type="text" id="firstName" name="firstName"><br><br>
+        <label for="lastName">Last Name:</label><br>
+        <input type="text" id="lastName" name="lastName"><br><br>
+        <label for="email">Email:</label><br>
+        <input type="text" id="email" name="email"><br><br>
+        Do you agree to the terms of service
+        <input type="checkbox" name="Yes" value="Yes">Yes<br>
+        <input type="submit" value="Submit">
+    </form>
+<p>Page 1: <a href="page1">file:///C:/Users/matt7/website1.html</a></p>
+<p>Page 2: <a href="page2">file:///C:/Users/matt7/website2.html</a></p>
+</body>
+</html>
