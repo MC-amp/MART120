@@ -1,0 +1,98 @@
+var xhead=200;
+var yhead=200;
+var movement = 10;
+var ynose1=200;
+var ynose2=200;
+var ynose3=150;
+var xmouth1=170;
+var xmouth2=230;
+var ymouth1=260;
+var ymouth2=260;
+var xlefteye=150;
+var yrighteye=150;
+var size=32
+function setup() {
+  createCanvas(800, 600);
+}
+
+function draw() {
+  background(220);
+  ellipse(xhead,yhead,200,250);
+  if(xhead >= 800 || xhead <= 0)
+    {
+       movement *= -1;
+    }
+
+     xhead += movement;
+  ellipse(xlefteye,150,30,20);
+    if(xlefteye >= 800 || xlefteye <= 0)
+    {
+       movement *= -1;
+    }
+
+     xlefteye += movement;
+  rect(140,150,20,7);
+  ellipse(250,yrighteye,30,20);
+      if(yrighteye >= 600 || yrighteye <= 0)
+    {
+       movement *= -1;
+    }
+
+     yrighteye += movement;
+  rect(240,150,20,7);
+  triangle(220,ynose1,180,ynose2,200,ynose3);
+    if(ynose1 >= 800 || ynose1 <= 0)
+    {
+       movement *= -1;
+    }
+
+    ynose1 += movement;
+    if(ynose2 >= 800 || ynose2 <= 0)
+    {
+       movement *= -1;
+    }
+
+    ynose2 += movement;
+    if(ynose3 >= 400 || ynose3 <= 0)
+    {
+       movement *= -1;
+    }
+
+    ynose3 += movement;
+  line(xmouth1, ymouth1, xmouth2, ymouth2);
+    if(xmouth1 >= 800 || xmouth1 <= 0)
+    {
+       movement *= -1;
+    }
+
+    xmouth1 += movement;
+    if(xmouth2 >= 800 || xmouth2 <= 0)
+    {
+       movement *= -1;
+    }
+
+    xmouth2 += movement;
+    if(ymouth2 >= 600 || ymouth2 <= 0)
+    {
+       movement *= -1;
+    }
+
+    ymouth2 += movement;
+    if(ymouth1 >= 600 || ymouth1 <= 0)
+    {
+       movement *= -1;
+    }
+
+    ymouth1 += movement;
+  line(170, 260, 160, 250);
+  line(240, 250, 230, 260);
+  textSize(size);
+  size=size+1
+    if(size >= 70)
+       size *= -1;
+  if(size <= 0)
+     size += 1;
+  text('Self Potrait', 110, 30);
+  textSize(12);
+  text('Matthew Camp', 250, 350);
+}

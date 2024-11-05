@@ -1,3 +1,5 @@
+var x=100
+var y=200
 function setup() {
   createCanvas(400, 400);
 }
@@ -5,6 +7,12 @@ function setup() {
 function draw() {
   background(220);
   ellipse(200,200,200,250);
+  if(x >= 800 || x <= 0)
+    {
+       movement *= -1;
+    }
+
+     x += movement;
   ellipse(150,150,30,20);
   rect(140,150,20,7);
   ellipse(250,150,30,20);
